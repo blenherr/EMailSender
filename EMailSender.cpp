@@ -144,7 +144,6 @@ EMailSender::EMailSender(const char* email_login, const char* email_password, co
 	this->setEMailFrom(email_from);
 	this->setEMailPassword(email_password);
 	this->setNameFrom(name_from);
-	this->setNameFrom(name_from);
 
 //	this->isSecure = isSecure;
 }
@@ -801,13 +800,14 @@ EMailSender::Response EMailSender::send(const char* to[], byte sizeOfTo,  byte s
 //  client.println(F("Mime-Version: 1.0"));
 
   client.println(F("MIME-Version: 1.0"));
-  client.println(F("Content-Type: Multipart/mixed; boundary=frontier"));
+  // client.println(F("Content-Type: Multipart/mixed; boundary=frontier"));
 
-  client.println(F("--frontier"));
+  // client.println(F("--frontier"));
 
     client.print(F("Content-Type: "));
     client.print(email.mime);
-    client.println(F("; charset=\"UTF-8\""));
+    client.println(F("; charset=UTF-8;"));
+    // client.println(F("; charset=\"UTF-8\""));
 //  client.println(F("Content-Type: text/html; charset=\"UTF-8\""));
   client.println(F("Content-Transfer-Encoding: 7bit"));
   client.println();
