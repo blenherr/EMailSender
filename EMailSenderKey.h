@@ -38,10 +38,10 @@
 //#define ARDUINO_ESP8266_RELEASE_2_4_2
 
 // If you want disable attachments and save memory comment this define
-#define ENABLE_ATTACHMENTS
+// #define ENABLE_ATTACHMENTS
 
 // Uncomment to enable printing out nice debug messages.
-//#define EMAIL_SENDER_DEBUG
+// #define EMAIL_SENDER_DEBUG
 
 // Define where debug output will be printed.
 #define DEBUG_PRINTER Serial
